@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Дока</title>
+    <link rel="stylesheet" href="assets/styles/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="#">MentorMatch</a>
+
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li><a class="main-nav__link" href="#">Менторы</a></li>
+            <li><a class="main-nav__link" href="#">Как это работает?</a></li>
+            <li>
+              <a class="main-nav__link" href="#">Зачем мне быть ментором?</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="button button--primary header-login">
+          Войти
+          <span class="button__icon">↗</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Найди <span class="hero__accent">своего ментора</span>
+            </h1>
+
+            <p class="hero__text">
+              Лучшие менторы на районе, чтобы помочь тебе расти и достигать
+              целей
+            </p>
+
+            <button class="button button--primary">Найти ментора</button>
+          </div>
+
+          <div class="hero__media">
+            <img
+              class="hero__image"
+              src="assets/images/hero.jpg"
+              alt="Люди обсуждают работу за ноутбуком"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="mentor-search">
+      <div class="container mentor-search__inner">
+        <h2 class="mentor-search__title">Поиск ментора</h2>
+
+        <!-- Search row -->
+        <form class="search-form">
+          <input
+            class="search-form__input"
+            type="text"
+            placeholder="Профессия, инструмент, имя ментора, или что угодно через запятую"
+          />
+          <button class="button button--primary" type="submit">Найти</button>
+          <button class="button" type="button" id="resetFilters">
+            Сбросить
+          </button>
+        </form>
+
+        <!-- Filters -->
+        <div class="filters">
+          <select class="filter">
+            <option>Скиллы</option>
+          </select>
+          <select class="filter">
+            <option>Индустрия</option>
+          </select>
+          <select class="filter">
+            <option>Опыт менторства</option>
+          </select>
+          <select class="filter">
+            <option>Стаж работы</option>
+          </select>
+          <select class="filter">
+            <option>Доступность</option>
+          </select>
+          <select class="filter">
+            <option>Цена за сессию</option>
+          </select>
+          <select class="filter">
+            <option>Формат сессии</option>
+          </select>
+          <select class="filter" name="skill">
+            <option value="">Скиллы</option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="mobile">Mobile</option>
+            <option value="devops">DevOps</option>
+          </select>
+
+          <select class="filter" name="format">
+            <option value="">Формат сессии</option>
+            <option value="online">Онлайн</option>
+            <option value="offline">Очно</option>
+          </select>
+        </div>
+
+        <!-- Mentor cards -->
+        <div class="mentor-grid">
+          <article class="mentor-card">
+            <img
+              class="mentor-card__photo"
+              src="assets/images/mentor-1.jpg"
+              alt="Мария Петрова"
+            />
+            <h3 class="mentor-card__name">Мария Петрова</h3>
+            <p class="mentor-card__role">Backend-разработчик</p>
+            <p class="mentor-card__price">8000 ₽ / час</p>
+          </article>
+
+          <article class="mentor-card">
+            <img
+              class="mentor-card__photo"
+              src="assets/images/mentor-2.jpg"
+              alt="Алексей Иванов"
+            />
+            <h3 class="mentor-card__name">Алексей Иванов</h3>
+            <p class="mentor-card__role">Frontend-разработчик</p>
+            <p class="mentor-card__price">7000 ₽ / час</p>
+          </article>
+
+          <article class="mentor-card">
+            <img
+              class="mentor-card__photo"
+              src="assets/images/mentor-3.jpg"
+              alt="Дмитрий Сидоров"
+            />
+            <h3 class="mentor-card__name">Дмитрий Сидоров</h3>
+            <p class="mentor-card__role">Мобильный разработчик</p>
+            <p class="mentor-card__price">7500 ₽ / час</p>
+          </article>
+
+          <article class="mentor-card">
+            <img
+              class="mentor-card__photo"
+              src="assets/images/mentor-4.jpg"
+              alt="Екатерина Лебедева"
+            />
+            <h3 class="mentor-card__name">Екатерина Лебедева</h3>
+            <p class="mentor-card__role">DevOps-инженер</p>
+            <p class="mentor-card__price">3000 ₽ / час</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container how-it-works__inner">
+        <h2 class="how-it-works__title">Как это работает?</h2>
+
+        <div class="how-layout">
+          <svg class="how-path" viewBox="0 0 1000 360" aria-hidden="true">
+            <path
+              d="M 190 73 C 200 200, 420 40, 450 120 S 300 200, 350 300 S 720 220, 800 200"
+            />
+          </svg>
+
+          <article class="how-card how-card--a">
+            <h3 class="how-card__title">Выбери ментора</h3>
+            <p class="how-card__text">
+              Просматривай анкеты специалистов, фильтруй по скиллам, опыту и
+              цене.
+            </p>
+          </article>
+
+          <article class="how-card how-card--b">
+            <h3 class="how-card__title">Опиши свою задачу</h3>
+            <p class="how-card__text">
+              Оставь запрос: что изучаешь, чем занимаешься и какой результат
+              хочешь получить.
+            </p>
+          </article>
+
+          <article class="how-card how-card--c">
+            <h3 class="how-card__title">Жди отклика</h3>
+            <p class="how-card__text">
+              Ментор изучит запрос и свяжется с тобой для согласования формата и
+              времени.
+            </p>
+          </article>
+
+          <article class="how-card how-card--d">
+            <h3 class="how-card__title">Потрясающий результат</h3>
+            <p class="how-card__text">
+              Проведи встречу с наставником, получи план действий и двигайся к
+              цели.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container faq__inner">
+        <h2 class="faq__title">Вопрос — Ответ</h2>
+
+        <div class="faq-list" role="list">
+          <article class="faq-item" role="listitem">
+            <div class="faq-answer">
+              <p class="faq-answer__text">
+                В современном мире специалистам часто нужно не просто совет, а
+                поддержка опытного человека. MentorMatch помогает легко и быстро
+                найти наставника, который поделится знаниями и опытом.
+              </p>
+            </div>
+            <button class="faq-question" type="button">
+              Зачем вы это делаете?
+            </button>
+          </article>
+
+          <article class="faq-item" role="listitem">
+            <div class="faq-answer">
+              <p class="faq-answer__text">
+                Отлично, ты на шаг ближе к цели! После отправки заявки ментор
+                изучает запрос и принимает решение в течение 1–2 дней. Если
+                ментор не подходит — поможем подобрать другого.
+              </p>
+            </div>
+            <button class="faq-question" type="button">
+              Я записался к ментору. Что дальше?
+            </button>
+          </article>
+
+          <article class="faq-item" role="listitem">
+            <div class="faq-answer">
+              <p class="faq-answer__text">
+                Мы верим в сообщество, а не в коммерцию. Поэтому никаких
+                навязанных пакетов — только честный контакт между людьми. Цена
+                зависит от эксперта, формата и длительности.
+              </p>
+            </div>
+            <button class="faq-question" type="button">
+              Сколько стоит менторство?
+            </button>
+          </article>
+
+          <article class="faq-item" role="listitem">
+            <div class="faq-answer">
+              <p class="faq-answer__text">
+                Не беда! Платформа растёт: каждый день появляются новые
+                специалисты. А пока ты можешь расширить фильтры или оставить
+                заявку — мы поможем найти вариант.
+              </p>
+            </div>
+            <button class="faq-question" type="button">
+              Не нашёл подходящего ментора. Что делать?
+            </button>
+          </article>
+
+          <article class="faq-item" role="listitem">
+            <div class="faq-answer">
+              <p class="faq-answer__text">
+                Всё просто: оставь заявку и расскажи о своём опыте. После
+                модерации мы добавим тебя в список экспертов.
+              </p>
+            </div>
+            <button class="faq-question" type="button">
+              Как стать ментором?
+            </button>
+          </article>
+
+          <article class="faq-item" role="listitem">
+            <div class="faq-answer">
+              <p class="faq-answer__text">
+                Твои мысли для нас важны. Делись предложениями — мы всегда рады
+                обратной связи. Пиши нам на почту или в Telegram, и мы ответим.
+              </p>
+            </div>
+            <button class="faq-question" type="button">
+              У меня есть идея. Куда писать?
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__inner">
+          <nav class="footer-nav" aria-label="Ссылки в подвале">
+            <a class="footer-pill" href="#">Telegram</a>
+            <a class="footer-pill" href="#">E-mail</a>
+            <a class="footer-pill" href="#">Facebook</a>
+          </nav>
+
+          <a class="footer-pill footer-pill--wide" href="#">
+            Политика в отношении персональных данных
+          </a>
+
+          <a class="footer-pill footer-pill--wide" href="#">
+            Отказ от ответственности
+          </a>
+
+          <div class="footer-brand">MentorMatch</div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="assets/scripts/main.js"></script>
+  </body>
+</html>

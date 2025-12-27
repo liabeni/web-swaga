@@ -1,0 +1,38 @@
+export const mentors = [
+  {
+    id: 1,
+    name: "Мария Петрова",
+    role: "Backend-разработчик",
+    pricePerHour: 8000,
+    skills: ["backend"],
+    format: "online",
+    photo: "assets/images/mentor-1.jpg",
+  },
+  {
+    id: 2,
+    name: "Алексей Иванов",
+    role: "Frontend-разработчик",
+    pricePerHour: 7000,
+    skills: ["frontend"],
+    format: "online",
+    photo: "assets/images/mentor-2.jpg",
+  },
+  {
+    id: 3,
+    name: "Дмитрий Сидоров",
+    role: "Мобильный разработчик",
+    pricePerHour: 7500,
+    skills: ["mobile"],
+    format: "offline",
+    photo: "assets/images/mentor-3.jpg",
+  },
+  {
+    id: 4,
+    name: "Екатерина Лебедева",
+    role: "DevOps-инженер",
+    pricePerHour: 3000,
+    skills: ["devops"],
+    format: "online",
+    photo: "assets/images/mentor-4.jpg",
+  },
+];
